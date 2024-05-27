@@ -53,13 +53,3 @@ This exercise involved setting up a Python environment, creating a script to add
     ```sh
     python add.py
     ```
-
-## Learning Journal
-### Experience
-Describe your experience with this exercise.
-- Setting up the Python environment was straightforward.
-- Creating the `add.py` script helped reinforce my understanding of user input and basic arithmetic operations in Python.
-
-### Goals
-- I want to learn more about advanced Python modules and libraries.
-- I aim to improve my understanding of version control with Git and GitHub.
