@@ -56,22 +56,10 @@ This exercise involved setting up a Python environment, creating a script to add
 
 ## Learning Journal
 ### Experience
-Describe your experience with this exercise. For example:
+Describe your experience with this exercise.
 - Setting up the Python environment was straightforward.
 - Creating the `add.py` script helped reinforce my understanding of user input and basic arithmetic operations in Python.
 
 ### Goals
-Describe what you hope to learn or improve in future exercises. For example:
 - I want to learn more about advanced Python modules and libraries.
 - I aim to improve my understanding of version control with Git and GitHub.
-
-## Screenshots
-1. Screenshot showing the virtual environment setup.
-2. Screenshot showing the `add.py` script running.
-3. Screenshot of the `requirements.txt` generation.
-4. Screenshot of the new environment setup and dependency installation.
-
-(Include the actual screenshot files in the `Exercise 1.1` folder with appropriate filenames like `step1_setup.png`, `step2_script_running.png`, etc.)
-
-## Conclusion
-This exercise provided a solid foundation for managing Python environments and dependencies, which is crucial for any Python development project. It also introduced the basics of working with GitHub for version control.
