@@ -8,10 +8,6 @@
 - Understand the concept of objects and their role in Python programming.
 - Develop a robust data structure for managing recipes in a Recipe app.
 
-### Overview
-
-Welcome to Exercise 1.2! In this exercise, we'll dive deep into the realm of data types in Python. Through a series of lessons and hands-on tasks, you'll explore variables, scalar and non-scalar objects, tuples, lists, strings, dictionaries, and more. By the end, you'll be equipped with the knowledge and skills to create and manipulate data structures effectively.
-
 ### Lessons Covered
 
 1. **Getting Started with IPython Shell**: Introduction to interactive Python sessions.
@@ -26,12 +22,45 @@ Welcome to Exercise 1.2! In this exercise, we'll dive deep into the realm of dat
 
 ### Learning Journal
 
-## Day 1
+#### Day 1
 - Set up the project folder and created the initial files.
 - Decided to use a dictionary for individual recipes and a list for storing all recipes.
 - Created the first recipe and added it to the list.
 
-## Day 2
+#### Day 2
 - Added additional recipes.
 - Printed the ingredients of each recipe.
 - Documented the data structure justification in the README file.
+
+## Exercise 1.3: Recipe Difficulty Calculator
+
+### Learning Objectives
+
+- Collect multiple recipes from the user and store them in a structured format.
+- Maintain a list of unique ingredients across all recipes.
+- Calculate and display the difficulty level of each recipe based on certain criteria.
+- Organize and present the collected data clearly.
+
+### Overview
+
+In Exercise 1.3, you will enhance your Recipe app by adding functionality to determine and display the difficulty level of each recipe. You'll collect recipes from the user, store them, and then calculate the difficulty based on the number of ingredients and cooking time.
+
+### Steps
+
+1. **Initialize Lists**: Start by initializing two empty lists: `recipes_list` and `ingredients_list`.
+2. **Define Function**: Create a function called `take_recipe` to collect recipe details from the user.
+3. **Collect Recipes**: Use a loop to collect multiple recipes, updating the `recipes_list` and `ingredients_list`.
+4. **Calculate Difficulty**: Determine the difficulty level of each recipe based on the given criteria.
+5. **Display Results**: Print each recipe's details along with its difficulty level and the list of all unique ingredients.
+
+### Learning Journal
+
+#### Day 1
+- Set up the initial lists and defined the `take_recipe` function.
+- Collected user input for recipes and stored them in the list.
+- Ensured unique ingredients were tracked across all recipes.
+
+#### Day 2
+- Added logic to calculate the difficulty level of each recipe.
+- Printed the details of each recipe including its difficulty.
+- Displayed the sorted list of all unique ingredients.
