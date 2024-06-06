@@ -64,3 +64,111 @@ In Exercise 1.3, you will enhance your Recipe app by adding functionality to det
 - Added logic to calculate the difficulty level of each recipe.
 - Printed the details of each recipe including its difficulty.
 - Displayed the sorted list of all unique ingredients.
+
+## Exercise 1.4: Storing and Searching Recipes
+
+### Learning Objectives
+
+- Store recipes in a binary file using the `pickle` module.
+- Retrieve and search recipes based on ingredients.
+- Implement robust file handling and user input validation.
+
+### Overview
+
+In this exercise, you will extend your Recipe app to store recipes on your machine and allow searching for recipes by ingredients. This task is divided into two scripts: `recipe_input.py` and `recipe_search.py`.
+
+### Steps
+
+#### Part 1: `recipe_input.py` Script
+
+1. **Import Modules**: Import the `pickle` module.
+2. **Define Functions**: 
+   - `calc_difficulty()`: Calculates the difficulty of a recipe based on cooking time and the number of ingredients.
+   - `take_recipe()`: Takes recipe details from the user and returns a dictionary.
+3. **Main Code**:
+   - Handle file operations with try-except-else-finally blocks.
+   - Collect multiple recipes from the user and update the recipes and ingredients lists.
+   - Store the updated data in a binary file.
+
+#### Part 2: `recipe_search.py` Script
+
+1. **Import Modules**: Import the `pickle` module.
+2. **Define Functions**: 
+   - `display_recipe()`: Displays recipe details.
+   - `search_ingredient()`: Searches for recipes containing a specific ingredient.
+3. **Main Code**:
+   - Handle file operations with try-except-else blocks.
+   - Allow the user to search for recipes by ingredients.
+
+### Learning Journal
+
+#### Day 1: Setting Up and Planning
+
+**What I did:**
+- Reviewed the task requirements and broke them down into manageable steps.
+- Set up the project folder and created two new Python scripts: `recipe_input.py` and `recipe_search.py`.
+
+**Challenges:**
+- Understanding the requirements for storing recipes in a binary file.
+- Figuring out how to structure the data to make it easy to add and search for recipes.
+
+**What I learned:**
+- The importance of planning and breaking down complex tasks into smaller, manageable parts.
+- How to handle binary files using the `pickle` module in Python.
+
+#### Day 2: Implementing `recipe_input.py`
+
+**What I did:**
+- Implemented the `calc_difficulty` function to determine the difficulty level of a recipe.
+- Created the `take_recipe` function to take recipe details from the user and compile them into a dictionary.
+- Wrote the main part of the script to handle file operations, read existing data, and append new recipes.
+
+**Challenges:**
+- Handling exceptions correctly to ensure the script can create a new file if one doesn't exist.
+- Ensuring that ingredients are not duplicated in the `all_ingredients` list.
+
+**What I learned:**
+- How to define and use functions to modularize code and make it more readable.
+- The use of try-except blocks to handle file operations safely.
+
+#### Day 3: Implementing `recipe_search.py`
+
+**What I did:**
+- Created the `display_recipe` function to print recipe details in a readable format.
+- Implemented the `search_ingredient` function to allow users to search for recipes by ingredient.
+- Wrote the main part of the script to read data from the binary file and search for recipes.
+
+**Challenges:**
+- Displaying the list of ingredients and handling user input to select an ingredient.
+- Making sure the search function efficiently finds and displays all relevant recipes.
+
+**What I learned:**
+- How to use the `enumerate` function to display a list with index numbers.
+- The importance of user input validation to prevent errors and improve user experience.
+
+#### Day 4: Testing and Documentation
+
+**What I did:**
+- Tested both scripts to ensure they work as expected.
+- Entered several sample recipes and verified that they were stored and retrieved correctly.
+- Took screenshots of the terminal output at various steps and saved them with appropriate filenames.
+
+**Challenges:**
+- Ensuring that the scripts handle edge cases, such as empty input or invalid file names.
+- Documenting each step clearly to make it easy to follow the process.
+
+**What I learned:**
+- The value of thorough testing to identify and fix issues before final submission.
+- How to document the development process effectively, which is crucial for both personal learning and sharing with others.
+
+#### Overall Reflection
+
+**Key takeaways:**
+- Working with binary files and the `pickle` module is essential for storing complex data structures in Python.
+- Proper error handling and user input validation are critical for creating robust scripts.
+- Breaking down tasks into smaller steps and documenting the process helps in managing and completing projects successfully.
+
+**Next steps:**
+- Continue to practice working with file operations and data structures in Python.
+- Explore other modules and techniques for data storage and retrieval.
+- Apply the concepts learned in this task to future projects and exercises.
