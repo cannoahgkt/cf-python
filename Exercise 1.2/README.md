@@ -172,3 +172,41 @@ In this exercise, you will extend your Recipe app to store recipes on your machi
 - Continue to practice working with file operations and data structures in Python.
 - Explore other modules and techniques for data storage and retrieval.
 - Apply the concepts learned in this task to future projects and exercises.
+
+## Exercise 1.5: Object-Oriented Recipe App
+
+### Learning Objectives
+
+- Apply object-oriented programming concepts to the Recipe app.
+- Create a `Recipe` class with data attributes and methods.
+- Implement methods to manage and search for recipes.
+
+### Overview
+
+In Exercise 1.5, you will refactor your Recipe app to use object-oriented programming principles. You will define a `Recipe` class with relevant attributes and methods, create instances of this class, and implement functionality to search recipes based on ingredients.
+
+### Steps
+
+1. **Define the `Recipe` Class**:
+   - Create attributes: `name`, `ingredients`, `cooking_time`, and `difficulty`.
+   - Implement methods for adding ingredients, calculating difficulty, and searching ingredients.
+
+2. **Implement Recipe Management**:
+   - Create instances of the `Recipe` class for different recipes.
+   - Store these instances in a list.
+
+3. **Search Functionality**:
+   - Implement a method to search for recipes by ingredient.
+   - Display recipes that match the search criteria.
+
+### Learning Journal
+
+#### Day 1
+- Defined the `Recipe` class with required attributes and methods.
+- Implemented methods to add ingredients and calculate difficulty.
+
+#### Day 2
+- Created multiple recipe instances.
+- Added functionality to search recipes by ingredient.
+- Tested the application with various recipes and search terms.
+
