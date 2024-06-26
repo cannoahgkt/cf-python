@@ -309,3 +309,24 @@ In Exercise 1.6, you will extend your Recipe app to use a MySQL database for sto
 - Continue to practice working with databases and command-line interfaces.
 - Explore other database management systems and techniques.
 - Apply the concepts learned in this task to future projects and exercises.
+
+## Troubleshooting
+
+### Connection Issues with MySQL Server
+
+If you encounter issues connecting to your MySQL server from the Python application, follow these steps to troubleshoot:
+
+1. **Verify Hostname and Port**: Double-check that the hostname (`your_hostname`) and port number (typically 3306 for MySQL) in your SQLAlchemy connection string (`recipe_app.py`) are correct and match your MySQL server configuration.
+
+2. **Check MySQL Server Status**: Ensure that your MySQL server is running and accessible from the host where your Python script is executed. Use MySQL client tools or command-line utilities to test connectivity.
+
+3. **Network Connectivity**: Test if your Python environment can reach the MySQL server. Ping the server or use tools like telnet to check port accessibility (e.g., `telnet your_hostname 3306`).
+
+4. **Firewall and Security Settings**: If applicable (e.g., cloud environments like AWS, Azure), review firewall rules or security groups to ensure they permit inbound traffic on the MySQL port (3306).
+
+5. **Database User Permissions**: Confirm that the database user specified in your SQLAlchemy connection string (`username`) has sufficient privileges to connect to the database (`database_name`).
+
+6. **Error Handling**: If SQLAlchemy raises specific errors (e.g., `OperationalError` or `socket.gaierror`), refer to SQLAlchemy and pymysql documentation or online resources for detailed error descriptions and troubleshooting tips.
+
+If issues persist after checking these steps, consider reviewing server logs, consulting platform-specific documentation, or seeking assistance from a database administrator or system administrator.
+
