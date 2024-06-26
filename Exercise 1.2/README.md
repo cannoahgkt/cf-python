@@ -210,3 +210,102 @@ In Exercise 1.5, you will refactor your Recipe app to use object-oriented progra
 - Added functionality to search recipes by ingredient.
 - Tested the application with various recipes and search terms.
 
+## Exercise 1.6: Recipe App with MySQL
+
+### Learning Objectives
+
+- Set up a MySQL database to store recipe data.
+- Implement CRUD (Create, Read, Update, Delete) operations for managing recipes in the database.
+- Develop a command-line interface to interact with the recipe database.
+
+### Overview
+
+In Exercise 1.6, you will extend your Recipe app to use a MySQL database for storing and managing recipe data. You will implement CRUD operations and create a command-line interface to interact with the database.
+
+### Steps
+
+1. **Set Up the Database**:
+   - Install MySQL and set up a new database for the Recipe app.
+   - Create tables to store recipes and their ingredients.
+
+2. **Implement Database Functions**:
+   - Write functions to create, read, update, and delete recipes in the database.
+   - Ensure proper handling of relationships between recipes and ingredients.
+
+3. **Develop Command-Line Interface**:
+   - Create a command-line interface to interact with the database.
+   - Implement options for adding, searching, updating, and deleting recipes.
+
+### Learning Journal
+
+#### Day 1: Setting Up and Planning
+
+**What I did:**
+- Installed MySQL and set up a new database for the Recipe app.
+- Created tables for storing recipes and ingredients.
+- Planned the structure of the command-line interface and database functions.
+
+**Challenges:**
+- Understanding the MySQL syntax and database design principles.
+- Planning the interaction between the command-line interface and the database.
+
+**What I learned:**
+- The basics of setting up and using MySQL databases.
+- How to design a database schema for storing related data.
+
+#### Day 2: Implementing CRUD Operations
+
+**What I did:**
+- Wrote functions to create, read, update, and delete recipes in the database.
+- Implemented proper handling of relationships between recipes and ingredients.
+- Tested the functions to ensure they work correctly.
+
+**Challenges:**
+- Handling foreign key constraints and ensuring data integrity.
+- Writing efficient SQL queries to interact with the database.
+
+**What I learned:**
+- How to implement CRUD operations in a MySQL database.
+- The importance of testing database functions to ensure they work as expected.
+
+#### Day 3: Developing Command-Line Interface
+
+**What I did:**
+- Developed a command-line interface to interact with the database.
+- Implemented options for adding, searching, updating, and deleting recipes.
+- Ensured user input is validated and handled properly.
+
+**Challenges:**
+- Designing a user-friendly command-line interface.
+- Ensuring the interface correctly interacts with the database functions.
+
+**What I learned:**
+- How to develop a command-line interface for a database application.
+- The importance of user input validation and error handling.
+
+#### Day 4: Testing and Documentation
+
+**What I did:**
+- Tested the command-line interface to ensure all functionalities work as expected.
+- Entered several sample recipes and verified the CRUD operations.
+- Took screenshots of the terminal output at various steps and saved them with appropriate filenames.
+
+**Challenges:**
+- Ensuring the interface handles all edge cases and unexpected inputs.
+- Documenting the development process and the steps to use the application.
+
+**What I learned:**
+- The value of thorough testing to identify and fix issues before final submission.
+- How to document the development process effectively, which is crucial for both personal learning and sharing with others.
+
+#### Overall Reflection
+
+**Key takeaways:**
+- Working with MySQL databases and implementing CRUD operations is essential for managing data in real-world applications.
+- Proper error handling and user input validation are critical for creating robust applications.
+- Breaking down tasks into smaller steps and documenting the process helps in managing and completing projects successfully.
+
+**Next steps:**
+- Continue to practice working with databases and command-line interfaces.
+- Explore other database management systems and techniques.
+- Apply the concepts learned in this task to future projects and exercises.
