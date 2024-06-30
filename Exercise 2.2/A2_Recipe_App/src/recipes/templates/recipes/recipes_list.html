@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #77b300;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #77b300;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Recipes</h1>
+    </header>
+    <main>
+        <ul>
+            {% for recipe in recipes %}
+            <li>
+                <a href="{% url 'recipes:recipe_detail' recipe.id %}">{{ recipe.name }}</a>
+                <p>{{ recipe.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+</html>
