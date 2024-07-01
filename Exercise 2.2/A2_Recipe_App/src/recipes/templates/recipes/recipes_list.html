@@ -16,6 +16,18 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header .auth-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
         }
         main {
             width: 80%;
@@ -44,6 +56,13 @@
 <body>
     <header>
         <h1>Recipes</h1>
+        <div class="auth-links">
+            {% if user.is_authenticated %}
+                <a href="{% url 'recipes:logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'recipes:login' %}">Login</a>
+            {% endif %}
+        </div>
     </header>
     <main>
         <ul>
