@@ -8,3 +8,9 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'email', 'password1', 'password2')
+
+
+class SearchForm(forms.Form):
+    name = forms.CharField(required=False, max_length=100, label='Title')
+    ingredient = forms.CharField(required=False, max_length=100, label='Ingredient')
+    cooking_time = forms.IntegerField(required=False, label='Cooking Time')

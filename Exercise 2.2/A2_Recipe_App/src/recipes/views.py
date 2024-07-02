@@ -2,15 +2,36 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, login
 from .models import Recipe
-from .forms import SignUpForm
+from .forms import SignUpForm, SearchForm
+import pandas as pd
 
 def home_view(request):
     return render(request, 'recipes/recipes_home.html')
 
 @login_required
 def recipes_list(request):
+    form = SearchForm(request.GET)
     recipes = Recipe.objects.all()
-    return render(request, 'recipes/recipes_list.html', {'recipes': recipes})
+    
+    if form.is_valid():
+        name = form.cleaned_data.get('name')
+        ingredient = form.cleaned_data.get('ingredient')
+        cooking_time = form.cleaned_data.get('cooking_time')
+        
+        if name:
+            recipes = recipes.filter(name__icontains=name)
+        if ingredient:
+            recipes = recipes.filter(ingredients__icontains=ingredient)
+        if cooking_time:
+            recipes = recipes.filter(cooking_time=cooking_time)
+
+    # Ensure 'id' is included
+    df = pd.DataFrame(list(recipes.values('id', 'name', 'ingredients', 'cooking_time')))
+    
+    return render(request, 'recipes/recipes_list.html', {
+        'form': form,
+        'recipes': df.to_dict(orient='records')
+    })
 
 @login_required
 def recipe_detail(request, id):

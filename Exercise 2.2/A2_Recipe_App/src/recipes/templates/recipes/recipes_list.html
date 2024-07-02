@@ -51,6 +51,21 @@
             color: #77b300;
             font-weight: bold;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #77b300;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -65,14 +80,29 @@
         </div>
     </header>
     <main>
-        <ul>
+        <form method="get" action=".">
+            <label for="name">name:</label>
+            <input type="text" id="name" name="name" value="{{ request.GET.name }}">
+            <label for="ingredient">Ingredient:</label>
+            <input type="text" id="ingredient" name="ingredient" value="{{ request.GET.ingredient }}">
+            <label for="cooking_time">Cooking Time:</label>
+            <input type="text" id="cooking_time" name="cooking_time" value="{{ request.GET.cooking_time }}">
+            <button type="submit">Search</button>
+        </form>
+        <table>
+            <tr>
+                <th>name</th>
+                <th>Ingredients</th>
+                <th>Cooking Time</th>
+            </tr>
             {% for recipe in recipes %}
-            <li>
-                <a href="{% url 'recipes:recipe_detail' recipe.id %}">{{ recipe.name }}</a>
-                <p>{{ recipe.description }}</p>
-            </li>
+            <tr>
+                <td><a href="{% url 'recipes:recipe_detail' recipe.id %}">{{ recipe.name }}</a></td>
+                <td>{{ recipe.ingredients }}</td>
+                <td>{{ recipe.cooking_time }}</td>
+            </tr>
             {% endfor %}
-        </ul>
+        </table>
     </main>
 </body>
 </html>
