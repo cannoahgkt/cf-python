@@ -2,10 +2,10 @@ from django.db import models
 from recipes.models import Recipe
 
 class Ingredient(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=255)
     quantity = models.FloatField()
     unit = models.CharField(max_length=50)
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name='ingredients')
+    recipe = models.ForeignKey(Recipe, related_name='ingredients', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return f"{self.quantity} {self.unit} of {self.name}"

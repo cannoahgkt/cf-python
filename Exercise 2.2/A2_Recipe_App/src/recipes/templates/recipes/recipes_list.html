@@ -66,6 +66,40 @@
             background-color: #77b300;
             color: white;
         }
+
+        .search-form {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .search-form label {
+            display: inline-block;
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        .search-form input[type="text"] {
+            width: 150px;
+            padding: 5px;
+            margin-right: 15px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .search-form button {
+            background-color: #77b300;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .search-form button:hover {
+            background-color: #669900;
+        }
     </style>
 </head>
 <body>
@@ -80,8 +114,8 @@
         </div>
     </header>
     <main>
-        <form method="get" action=".">
-            <label for="name">name:</label>
+        <form method="get" action="." class="search-form">
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="{{ request.GET.name }}">
             <label for="ingredient">Ingredient:</label>
             <input type="text" id="ingredient" name="ingredient" value="{{ request.GET.ingredient }}">
@@ -91,14 +125,18 @@
         </form>
         <table>
             <tr>
-                <th>name</th>
+                <th>Name</th>
                 <th>Ingredients</th>
                 <th>Cooking Time</th>
             </tr>
             {% for recipe in recipes %}
             <tr>
                 <td><a href="{% url 'recipes:recipe_detail' recipe.id %}">{{ recipe.name }}</a></td>
-                <td>{{ recipe.ingredients }}</td>
+                <td>
+                    {% for ingredient in recipe.ingredients.all %}
+                        {{ ingredient.name }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </td>
                 <td>{{ recipe.cooking_time }}</td>
             </tr>
             {% endfor %}
